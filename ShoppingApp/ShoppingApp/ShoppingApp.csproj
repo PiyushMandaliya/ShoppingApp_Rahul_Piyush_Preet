@@ -174,5 +174,8 @@
     <Folder Include="Customer\Order\ViewModels\" />
     <Folder Include="Customer\Order\Views\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="db\initial_script.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
