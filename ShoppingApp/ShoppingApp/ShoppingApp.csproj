@@ -77,10 +77,10 @@
     <Compile Include="Customer\Product\Views\ProductsView.xaml.cs">
       <DependentUpon>ProductsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Admin\Admin.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Repository\AdminRepositpries\AdminRepository.cs" />
     <Compile Include="Repository\BaseRepository.cs" />

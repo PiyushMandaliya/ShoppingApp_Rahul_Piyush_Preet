@@ -54,3 +54,5 @@ C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\ob
 C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\View\MainWindow.g.cs
 C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\View\MainWindow.baml
 C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.csprojAssemblyReference.cache
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\View\Admin\AdminLogin.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\View\Admin\AdminLogin.baml

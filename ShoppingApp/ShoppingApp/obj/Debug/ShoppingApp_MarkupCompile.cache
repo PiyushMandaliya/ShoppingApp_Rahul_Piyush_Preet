@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\App.xaml
-61063362056
+71831496598
 
-26323407276
+27748557568
 141066371409
-Customer\Authentication\Views\ChangePasswordView.xaml;Customer\Authentication\Views\ForgotPasswordView.xaml;Customer\Authentication\Views\LoginView.xaml;Customer\Authentication\Views\RegistrationView.xaml;Customer\Product\Views\ProductsView.xaml;View\MainWindow.xaml;
+Customer\Authentication\Views\ChangePasswordView.xaml;Customer\Authentication\Views\ForgotPasswordView.xaml;Customer\Authentication\Views\LoginView.xaml;Customer\Authentication\Views\RegistrationView.xaml;Customer\Product\Views\ProductsView.xaml;View\Admin\AdminLogin.xaml;View\MainWindow.xaml;
 
 False
 
