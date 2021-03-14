@@ -12,12 +12,12 @@ namespace ShoppingApp.Models
     /// </summary>
     class User
     {
-        public long Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public long Id { get; }
+        public string FirstName { get; }
+        public string LastName { get; }
+        public string Country { get;}
+        public string City { get; }
+        public DateTime DateOfBirth { get;}
 
         public User(long id, string firstName, string lastName)
         {
@@ -25,5 +25,7 @@ namespace ShoppingApp.Models
             FirstName = firstName;
             LastName = lastName;
         }
+
+
     }
 }

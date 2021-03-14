@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShoppingApp.Admin.Product.Views
+namespace ShoppingApp.View.Admin
 {
     /// <summary>
-    /// Interaction logic for ProductsView.xaml
+    /// Interaction logic for AdminLogin.xaml
     /// </summary>
-    public partial class ProductsView : Page
+    public partial class AdminLogin : Window
     {
-        public ProductsView()
+        public AdminLogin()
         {
             InitializeComponent();
         }

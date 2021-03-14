@@ -29,3 +29,28 @@ C:\Users\isi\Desktop\ISI\D05\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\Shopping
 C:\Users\isi\Desktop\ISI\D05\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.exe
 C:\Users\isi\Desktop\ISI\D05\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.pdb
 C:\Users\isi\Desktop\ISI\D05\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.csprojAssemblyReference.cache
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\bin\Debug\ShoppingApp.exe.config
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\bin\Debug\ShoppingApp.exe
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\bin\Debug\ShoppingApp.pdb
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\ChangePasswordView.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\ForgotPasswordView.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\LoginView.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\RegistrationView.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Product\Views\ProductsView.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\App.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp_MarkupCompile.cache
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp_MarkupCompile.lref
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\ChangePasswordView.baml
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\ForgotPasswordView.baml
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\LoginView.baml
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Authentication\Views\RegistrationView.baml
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\Customer\Product\Views\ProductsView.baml
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.g.resources
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.Properties.Resources.resources
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.csproj.GenerateResource.cache
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.csproj.CoreCompileInputs.cache
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.exe
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.pdb
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\View\MainWindow.g.cs
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\View\MainWindow.baml
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\ShoppingApp.csprojAssemblyReference.cache

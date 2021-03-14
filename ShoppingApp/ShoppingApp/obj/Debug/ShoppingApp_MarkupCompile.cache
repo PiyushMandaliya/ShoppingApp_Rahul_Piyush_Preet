@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\isi\Desktop\ISI\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\obj\Debug\
 ShoppingApp
 none
 false
 DEBUG;TRACE
-C:\Users\isi\Desktop\ISI\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\App.xaml
-9730923417
+C:\Z ISI\Course 6 - C#\ShoppingApp_Rahul_Piyush_Preet\ShoppingApp\ShoppingApp\App.xaml
+61063362056
 
-30-1219144873
+26323407276
 141066371409
-Admin\Order\Views\OrdersView.xaml;Admin\Product\Views\ProductsView.xaml;Admin\User\Views\UsersView.xaml;Customer\Authentication\Views\ChangePasswordView.xaml;Customer\Authentication\Views\ForgotPasswordView.xaml;Customer\Authentication\Views\LoginView.xaml;Customer\Authentication\Views\RegistrationView.xaml;Customer\Product\Views\ProductsView.xaml;MainWindow.xaml;
+Customer\Authentication\Views\ChangePasswordView.xaml;Customer\Authentication\Views\ForgotPasswordView.xaml;Customer\Authentication\Views\LoginView.xaml;Customer\Authentication\Views\RegistrationView.xaml;Customer\Product\Views\ProductsView.xaml;View\MainWindow.xaml;
 
-True
+False
 

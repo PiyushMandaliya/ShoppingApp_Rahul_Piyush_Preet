@@ -1,4 +1,5 @@
 ﻿using ShoppingApp.Repository;
+using ShoppingApp.Repository.AdminRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,7 @@ namespace ShoppingApp
     {
         public MainWindow()
         {
-            UserRepository userRepository = new UserRepository();
-            var users = userRepository.GetAll();
-            InitializeComponent();
+
         }
     }
 }

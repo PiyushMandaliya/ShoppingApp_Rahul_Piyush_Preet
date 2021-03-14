@@ -8,8 +8,13 @@ namespace ShoppingApp.Models
 {
     class Cart
     {
-        public long Id { get; set; }
-        public long ProductId { get; set; }
-        public long UserId { get; set; }
+        public long CartId { get;  }
+        public long ProductId { get;}
+        public long UserId { get;}
+        
+        public Cart(long CartId, long ProductId, long UserId)
+        {
+
+        }
     }
 }
