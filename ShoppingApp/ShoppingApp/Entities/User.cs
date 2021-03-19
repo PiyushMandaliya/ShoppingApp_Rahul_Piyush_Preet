@@ -1,13 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Utility.Authentication;
+using Utility.Entities;
+
 
 namespace ShoppingApp.Entities
 {
-    class User
+    class User:  Entity
     {
+        public string Username { get; set; }
+        public PasswordHash Password { get; set; }
 
-        //Preet
+        public byte[] Salt => Password.Salt;
+        public byte[] Hash => Password.Hash;
+
+
+
+        public User(string username, PasswordHash password)
+            : this(default, default, default, username, password)
+        { }
+
+        public User(long id, DateTime dateCreated, DateTime dateModified, string username, PasswordHash password)
+            : base(id, dateCreated, dateModified)
+        {
+            Username = username;
+            Password = password;
+        }
+
 
     }
 }
