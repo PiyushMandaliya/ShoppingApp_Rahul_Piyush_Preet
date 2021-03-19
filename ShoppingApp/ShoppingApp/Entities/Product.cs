@@ -72,6 +72,17 @@ namespace ShoppingApp.Entities
             get => inventoryCount;
         }
 
+        private string categoryName;
+        public string CategoryName
+        {
+            set
+            {
+                categoryName = value;
+                NotifyPropertyChanged(nameof(CategoryName));
+            }
+            get => categoryName;
+        }
+
         public Product() { }
 
         public Product(string title, string description, long categoryId, decimal price,
@@ -87,6 +98,18 @@ namespace ShoppingApp.Entities
             this.Description = description;
             this.Price = price;
             this.InventoryCount = inventoryCount;
+            this.categoryName = "";
+        }
+
+        public Product(long id, DateTime dateCreated, DateTime dateModified, string title, string description, long categoryId, decimal price, int inventoryCount, string categoryName)
+            : base(id, dateCreated, dateModified)
+        {
+            this.CategoryId = categoryId;
+            this.Title = title;
+            this.Description = description;
+            this.Price = price;
+            this.InventoryCount = inventoryCount;
+            this.CategoryName = categoryName;
         }
     }
 }

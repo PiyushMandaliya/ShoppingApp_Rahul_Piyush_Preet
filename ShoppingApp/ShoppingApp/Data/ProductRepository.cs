@@ -31,10 +31,7 @@ namespace ShoppingApp.Data
         + "CategoryId, Title, Description, Price, "
         + "ImagePath, InventoryCount, HoursPaid, PaymentReceived "
         + "FROM dbo.Products";
-        private static readonly string Where = "WHERE ";
-        private static readonly string And = "AND ";
-        private static readonly string OrderBy = "ORDER BY ";
-
+        
         private readonly string connectionString;
 
 
@@ -95,8 +92,9 @@ namespace ShoppingApp.Data
             connection.Open();
             using SqlCommand command = connection.CreateCommand();
 
-            command.CommandText = "select Id, DateCreated, DateModified, CategoryId, Title, Description, Price, InventoryCount"
-                + " FROM dbo.Products";
+            command.CommandText = "select dbo.Products.Id, dbo.Products.DateCreated, dbo.Products.DateModified, dbo.Products.CategoryId, dbo.Products.Title, dbo.Products.Description, " + 
+                "dbo.Products.Price, dbo.Products.InventoryCount, dbo.Category.Name FROM dbo.Products"
+                + " INNER JOIN dbo.Category ON (CategoryId = dbo.Category.Id)";
 
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -163,9 +161,9 @@ namespace ShoppingApp.Data
             string description = reader.GetString(5);
             decimal price = reader.GetDecimal(6);
             int inventoryCount = reader.GetInt32(7);
-
+            string categoryName = reader.GetString(8);
             return new Product(id, dateCreated, dateModified,
-                title, description, categoryId, price, inventoryCount);
+                title, description, categoryId, price, inventoryCount, categoryName);
         }
     }
 }

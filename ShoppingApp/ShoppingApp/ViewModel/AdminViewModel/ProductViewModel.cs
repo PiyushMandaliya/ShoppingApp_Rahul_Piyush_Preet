@@ -11,7 +11,7 @@ using Utility.Monads;
 
 namespace ShoppingApp.ViewModel.AdminViewModel
 {
-    public class ProductViewModel
+    public class ProductViewModel: ViewModel
     {
 
         public event Action<string> addProductError;
@@ -22,6 +22,17 @@ namespace ShoppingApp.ViewModel.AdminViewModel
         public DelegateCommand AddCommand { get; }
 
         public AddProductViewModel addProductViewModel { get; }
+
+        private Product selectedProduct;
+        public Product SelectedProduct
+        {
+            get => selectedProduct;
+            set
+            {
+                selectedProduct = value;
+                NotifyPropertyChanged(nameof(SelectedProduct));
+            }
+        }
 
         public ProductViewModel(ICategoryService categoryService,IProductService productService)
         {

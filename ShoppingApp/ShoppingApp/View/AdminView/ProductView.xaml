@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShoppingApp.View.AdminView"
         mc:Ignorable="d"
-        Title="ProductView" Height="450" Width="800">
+        Title="ProductView" Height="650" Width="1050">
 
     <Window.Resources>
         <Style TargetType="Button">
@@ -34,7 +34,7 @@
             <StackPanel Orientation="Vertical"
                     DockPanel.Dock="Bottom">
 
-                <DockPanel>
+                <DockPanel >
 
                     <StackPanel Orientation="Vertical"
                         MinWidth="250"
@@ -101,72 +101,130 @@
 
                     <Separator/>
 
-                    <StackPanel Orientation="Vertical"
+                    <DockPanel >
+                        <StackPanel Orientation="Vertical"
                         MinWidth="250"
                         MaxWidth="500"
                         DockPanel.Dock="Left">
-                        <Label FontWeight="Bold" Content="Product Details" FontSize="15" HorizontalAlignment="Center"/>
-                        <Separator/>
+                            <Label FontWeight="Bold" Content="Product Details" FontSize="15" HorizontalAlignment="Center"/>
+                            <Separator/>
 
-                        <DataGrid x:Name="EmployeesDataGrid"
-                          AutoGenerateColumns="False"
-                          CanUserAddRows="False"
-                          ItemsSource="{Binding Path=Products}"
-                          SelectedItem="{Binding Path=SelectedProducte}"
-                          MinHeight="250"
-                          DockPanel.Dock="Top"
-                          SelectionMode="Single">
+                            <DataGrid x:Name="EmployeesDataGrid"
+                                  AutoGenerateColumns="False"
+                                  CanUserAddRows="False"
+                                  ItemsSource="{Binding Path=Products}"
+                                  SelectedItem="{Binding Path=SelectedProduct}"
+                                  MinHeight="250"
+                                  DockPanel.Dock="Top"
+                                  SelectionMode="Single">
 
 
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="Id"
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id"
                                         Binding="{Binding Path=Id, Mode=TwoWay}" 
                                         IsReadOnly="True"
                                         Width="Auto" />
 
 
-                                <DataGridTextColumn Header="Title"
+                                    <DataGridTextColumn Header="Title"
                                         Binding="{Binding Path=Title, Mode=TwoWay}" 
                                         Width="100" />
 
 
-                                <DataGridTemplateColumn Header="Description" Width="100">
-                                    <DataGridTemplateColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox
-                                            Height="50"  
-                                            TextWrapping="Wrap"
-                                            AcceptsReturn="True"
-                                            Text="{Binding Path=Description}"
-                                            VerticalScrollBarVisibility="Visible"/>
-                                        </DataTemplate>
-                                    </DataGridTemplateColumn.CellTemplate>
-                                </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Description" Width="100">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Label
+                                               Width="100"
+                                            Content="{Binding Path=Description}"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
 
 
-                                <DataGridTemplateColumn Header="Category">
-                                    <DataGridTemplateColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <ComboBox 
-                                                ItemsSource="{Binding Path=addProductViewModel.CategoryList}"
-                                                DisplayMemberPath="CategoryName" />
-                                        </DataTemplate>
-                                    </DataGridTemplateColumn.CellTemplate>
-                                </DataGridTemplateColumn>
+
+                                    <DataGridTextColumn Header="Category"
+                                        Binding="{Binding Path=CategoryName, Mode=TwoWay}" 
+                                        Width="100" />
 
 
-                                <DataGridTextColumn Header="Price"
+                                    <DataGridTextColumn Header="Price"
                                         Binding="{Binding Path=Price, Mode=TwoWay}" 
                                         Width="Auto" />
 
 
-                                <DataGridTextColumn Header="Item Count"
+                                    <DataGridTextColumn Header="Item Count"
                                         Binding="{Binding Path=InventoryCount, Mode=TwoWay}" 
                                         Width="Auto" />
 
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </StackPanel>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+
+                        <Separator/>
+
+                        <StackPanel Orientation="Vertical"
+                        MinWidth="250"
+                        MaxWidth="250"
+                        DockPanel.Dock="Right">
+
+                            <Label FontWeight="Bold" Content="Add Product" FontSize="15" HorizontalAlignment="Center"/>
+                            <Separator/>
+
+                            <DockPanel>
+                                <Label Content="Title" Width="80" HorizontalContentAlignment="Right"/>
+                                <Separator/>
+                                <TextBox Text="{Binding Path=SelectedProduct.Title}"/>
+                            </DockPanel>
+
+                            <Separator/>
+
+                            <DockPanel>
+                                <Label Content="Description" Width="80" HorizontalContentAlignment="Right"/>
+                                <Separator/>
+                                <TextBox
+                                Height="50"  
+                                TextWrapping="Wrap"
+                                AcceptsReturn="True"
+                                Text="{Binding Path=SelectedProduct.Description}"
+                                VerticalScrollBarVisibility="Visible"/>
+                            </DockPanel>
+
+                            <Separator/>
+
+                            <DockPanel>
+                                <Label Content="Category" Width="80" HorizontalContentAlignment="Right"/>
+                                <Separator/>
+                                <ComboBox 
+                                ItemsSource="{Binding Path=addProductViewModel.CategoryList}"
+                                DisplayMemberPath="CategoryName"
+                                SelectedValue="{Binding Path=addProductViewModel.SelectedCategory}" />
+                            </DockPanel>
+
+                            <Separator/>
+
+                            <DockPanel>
+                                <Label Content="Price" Width="80" HorizontalContentAlignment="Right"/>
+                                <Separator/>
+                                <TextBox Text="{Binding Path=SelectedProduct.Price}" />
+                            </DockPanel>
+
+                            <Separator/>
+
+                            <DockPanel>
+                                <Label Content="Item Count" Width="80" HorizontalContentAlignment="Right"/>
+                                <Separator/>
+                                <TextBox Text="{Binding Path=SelectedProduct.InventoryCount}"/>
+                            </DockPanel>
+
+                            <Separator/>
+
+                            <DockPanel>
+                                <Button Content="Add Product" Width="120" HorizontalAlignment="Right" Command="{Binding Path=UpdateCommand}"/>
+                            </DockPanel>
+
+                        </StackPanel>
+                    </DockPanel>
                 </DockPanel>
             </StackPanel>
         </DockPanel>
