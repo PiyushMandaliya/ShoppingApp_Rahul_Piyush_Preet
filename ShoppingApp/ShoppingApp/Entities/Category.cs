@@ -39,5 +39,11 @@ namespace ShoppingApp.Entities
             CategoryName = categoryName;
         }
 
+        public Category(long id,  string categoryName)
+        {
+            this.Id = id;
+            CategoryName = categoryName;
+        }
+
     }
 }

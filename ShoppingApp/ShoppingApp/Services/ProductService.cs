@@ -15,6 +15,8 @@ namespace ShoppingApp.Services
 
         Result AddProduct(Product product);
         Result RemoveProduct(Product product);
+
+        Result UpdateProduct(Product product);
     }
 
     class ProductService : IProductService
@@ -26,7 +28,6 @@ namespace ShoppingApp.Services
         {
             this.repository = repository;
         }
-
 
         public Result AddProduct(Product product)
         {
@@ -50,7 +51,19 @@ namespace ShoppingApp.Services
 
         public Result RemoveProduct(Product product)
         {
-            throw new NotImplementedException();
+            if( repository.Remove(product))
+                return Result.Success();
+            
+            return Result.Error("Fail to remove product");
+
+        }
+
+        public Result UpdateProduct(Product product)
+        {
+            if (repository.Update(product))
+                return Result.Success();
+
+            return Result.Error("Fail to update product");
         }
     }
 }

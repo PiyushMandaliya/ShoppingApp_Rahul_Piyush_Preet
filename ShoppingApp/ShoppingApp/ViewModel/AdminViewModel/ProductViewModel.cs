@@ -20,6 +20,8 @@ namespace ShoppingApp.ViewModel.AdminViewModel
         public ObservableCollection<Product> Products { get; }
 
         public DelegateCommand AddCommand { get; }
+        public DelegateCommand UpdateCommand { get; }
+        public DelegateCommand DeleteCommand { get; }
 
         public AddProductViewModel addProductViewModel { get; }
 
@@ -34,6 +36,7 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             }
         }
 
+
         public ProductViewModel(ICategoryService categoryService,IProductService productService)
         {
             addProductViewModel = new AddProductViewModel(categoryService);
@@ -41,6 +44,8 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             Products = getProducts();
 
             AddCommand = new DelegateCommand(Add);
+            UpdateCommand = new DelegateCommand(Update);
+            DeleteCommand = new DelegateCommand(Delete);
         }
 
         private ObservableCollection<Product> getProducts()
@@ -70,15 +75,56 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             }
         }
 
+        private void Update(Object _)
+        {
+            if (SelectedProduct == null && canUpdateProduct())
+                addProductError.Invoke("Please select employee for delete");
+            else
+            {
+                if (canUpdateProduct())
+                {
+                    Result result = productService.UpdateProduct(SelectedProduct);
+                    if (result.Successful)
+                    {
+
+                        addProductError.Invoke("Date Updated succesfully");
+                    }
+                    else
+                        addProductError.Invoke(result.ErrorMessage);
+                }
+            }
+        }
+        private void Delete(Object _)
+        {
+            if (SelectedProduct == null)
+                addProductError.Invoke("Please select employee for delete");
+            else
+            {
+                Result result = productService.RemoveProduct(SelectedProduct);
+                if (result.Successful)
+                {
+                    Products.Remove(SelectedProduct);
+                    SelectedProduct = null;
+                }
+                else
+                    addProductError.Invoke(result.ErrorMessage);
+            }
+        }
+
         private bool CanAddProduct()
         {
-            return validateProductTitle() && validateDescription() && validateCategory() && validatePrice() && validateInventory();
+            return validateProductTitle(addProductViewModel.Title) && validateDescription(addProductViewModel.Description) && validateCategory(addProductViewModel.SelectedCategory) && validatePrice(addProductViewModel.Price) && validateInventory(addProductViewModel.InventoryCount);
         }
 
 
-        private bool validateProductTitle()
+        private bool canUpdateProduct()
         {
-            if (string.IsNullOrWhiteSpace(addProductViewModel.Title))
+            return validateProductTitle(SelectedProduct.Title) && validateDescription(SelectedProduct.Description) && validateCategory(SelectedProduct.Category) && validatePrice(SelectedProduct.Price) && validateInventory(SelectedProduct.InventoryCount);
+        }
+
+        private bool validateProductTitle(string title)
+        {
+            if (string.IsNullOrWhiteSpace(title))
             {
                 addProductError.Invoke("Please enter valid title");
                 return false;
@@ -86,9 +132,9 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             return true;
         }
 
-        private bool validateDescription()
+        private bool validateDescription(string description)
         {
-            if (string.IsNullOrWhiteSpace(addProductViewModel.Description))
+            if (string.IsNullOrWhiteSpace(description))
             {
                 addProductError.Invoke("Please enter valid description");
                 return false;
@@ -96,9 +142,9 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             return true;
         }
 
-        private bool validateCategory()
+        private bool validateCategory(Category category)
         {
-            if(addProductViewModel.SelectedCategory == null)
+            if(category == null)
             {
                 addProductError.Invoke("Please select category");
                 return false;
@@ -106,18 +152,18 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             return true;
         }
 
-        private bool validatePrice()
+        private bool validatePrice(decimal price)
         {
-            if(addProductViewModel.Price <= 0)
+            if(price <= 0)
             {
                 addProductError.Invoke("Please enter valid price");
                 return false;
             }
             return true;
         }
-        private bool validateInventory()
+        private bool validateInventory(int ItemCount)
         {
-            if (addProductViewModel.InventoryCount <= 0)
+            if (ItemCount <= 0)
             {
                 addProductError.Invoke("Please enter valid item count");
                 return false;

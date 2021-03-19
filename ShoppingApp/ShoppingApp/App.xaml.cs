@@ -20,20 +20,8 @@ namespace ShoppingApp
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            CategoryRepository categoryRepository = new CategoryRepository();
-            CategoryService categoryService = new CategoryService(categoryRepository);
-            CategoryViewModel categoryViewModel = new CategoryViewModel(categoryService);
-            Window window = new CategoryView(categoryViewModel);
-            //window.Show();
-
-
-
-            ProductRepository productRepository = new ProductRepository();
-            ProductService productService = new ProductService(productRepository);
-
-            ProductViewModel productViewModel = new ProductViewModel(categoryService,productService);
-            
-            ((Window)new ProductView(productViewModel)).Show();
+            Window window = new AdmiMenuView();
+            window.Show();
         }
     }
 }

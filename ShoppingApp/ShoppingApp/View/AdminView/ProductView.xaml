@@ -128,6 +128,7 @@
 
                                     <DataGridTextColumn Header="Title"
                                         Binding="{Binding Path=Title, Mode=TwoWay}" 
+                                        IsReadOnly="True"
                                         Width="100" />
 
 
@@ -144,16 +145,19 @@
 
 
                                     <DataGridTextColumn Header="Category"
-                                        Binding="{Binding Path=CategoryName, Mode=TwoWay}" 
+                                                        IsReadOnly="True"
+                                        Binding="{Binding Path=Category.CategoryName, Mode=TwoWay}" 
                                         Width="100" />
 
 
                                     <DataGridTextColumn Header="Price"
+                                                        IsReadOnly="True"
                                         Binding="{Binding Path=Price, Mode=TwoWay}" 
                                         Width="Auto" />
 
 
                                     <DataGridTextColumn Header="Item Count"
+                                                        IsReadOnly="True"
                                         Binding="{Binding Path=InventoryCount, Mode=TwoWay}" 
                                         Width="Auto" />
 
@@ -196,9 +200,9 @@
                                 <Label Content="Category" Width="80" HorizontalContentAlignment="Right"/>
                                 <Separator/>
                                 <ComboBox 
-                                ItemsSource="{Binding Path=addProductViewModel.CategoryList}"
-                                DisplayMemberPath="CategoryName"
-                                SelectedValue="{Binding Path=addProductViewModel.SelectedCategory}" />
+                                    ItemsSource="{Binding Path=addProductViewModel.CategoryList}"
+                                    DisplayMemberPath="CategoryName"
+                                    SelectedValue="{Binding Path=SelectedProduct.Category}" />
                             </DockPanel>
 
                             <Separator/>
@@ -220,7 +224,8 @@
                             <Separator/>
 
                             <DockPanel>
-                                <Button Content="Add Product" Width="120" HorizontalAlignment="Right" Command="{Binding Path=UpdateCommand}"/>
+                                <Button Content="Delete Product" Width="120" HorizontalAlignment="Right" Command="{Binding Path=DeleteCommand}"/>
+                                <Button Content="Update Product" Width="120" HorizontalAlignment="Right" Command="{Binding Path=UpdateCommand}"/>
                             </DockPanel>
 
                         </StackPanel>

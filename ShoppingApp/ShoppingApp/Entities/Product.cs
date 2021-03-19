@@ -39,6 +39,19 @@ namespace ShoppingApp.Entities
         }
 
 
+        private Category category;
+        public Category Category
+        {
+            set
+            {
+                category = value;
+                NotifyPropertyChanged(nameof(Category));
+
+            }
+            get => category;
+        }
+
+
         private string description;
         public string Description
         {
@@ -105,6 +118,7 @@ namespace ShoppingApp.Entities
             : base(id, dateCreated, dateModified)
         {
             this.CategoryId = categoryId;
+            Category = new Category(categoryId,categoryName);
             this.Title = title;
             this.Description = description;
             this.Price = price;

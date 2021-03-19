@@ -16,7 +16,6 @@ namespace ShoppingApp.Data
     {
         Product Get(long id);
         IList<Product> GetAll();
-
         void Add(Product product);
         bool Remove(Product product);
         bool Update(Product product);
@@ -143,6 +142,7 @@ namespace ShoppingApp.Data
             command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = product.Description;
             command.Parameters.Add("@Price", SqlDbType.Decimal).Value = product.Price;
             command.Parameters.Add("@InventoryCount", SqlDbType.Int).Value = product.InventoryCount;
+            command.Parameters.Add("@Id", SqlDbType.BigInt).Value = product.Id;
 
             int rowsAffected = command.ExecuteNonQuery();
 
