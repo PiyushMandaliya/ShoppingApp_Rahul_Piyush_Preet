@@ -39,16 +39,22 @@ Username : jared password: qwerty999
 
 Tasks Completed by the team members
 
+
+
 #Rahul Mistry
 # Product
 # Cart
 # Checkout
 # Usercontext
 
+
+
 #Piyush Mandaliya 
 # Admin - Login & Logout
 # Admin - Manage Product
 # Admin - Manage Category 
+
+
 
 #Preet Kansara
 # Login
