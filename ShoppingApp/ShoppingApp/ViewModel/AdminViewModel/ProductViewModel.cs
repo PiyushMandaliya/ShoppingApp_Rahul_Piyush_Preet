@@ -36,7 +36,6 @@ namespace ShoppingApp.ViewModel.AdminViewModel
             }
         }
 
-
         public ProductViewModel(ICategoryService categoryService,IProductService productService)
         {
             addProductViewModel = new AddProductViewModel(categoryService);

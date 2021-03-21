@@ -12,16 +12,13 @@ namespace ShoppingApp.Services
     {
         Result<Product> GetProduct(long id);
         IList<Product> GetAllProducts();
-
         Result AddProduct(Product product);
         Result RemoveProduct(Product product);
-
         Result UpdateProduct(Product product);
     }
 
     class ProductService : IProductService
     {
-
         private readonly IProductRepository repository;
 
         public ProductService(IProductRepository repository)
@@ -51,9 +48,9 @@ namespace ShoppingApp.Services
 
         public Result RemoveProduct(Product product)
         {
-            if( repository.Remove(product))
+            if (repository.Remove(product))
                 return Result.Success();
-            
+
             return Result.Error("Fail to remove product");
 
         }

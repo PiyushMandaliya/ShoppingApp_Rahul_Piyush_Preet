@@ -22,23 +22,18 @@ namespace ShoppingApp.Data
 
     }
 
-    class ProductRepository : IProductRepository
+    class ProductRepository : BaseRepository, IProductRepository
     {
 
         private static readonly string SelectCommandCore =
         "SELECT TOP(1000) Id, DateCreated, DateModified, "
         + "CategoryId, Title, Description, Price, "
-        + "ImagePath, InventoryCount, HoursPaid, PaymentReceived "
-        + "FROM dbo.Products";
-        
-        private readonly string connectionString;
+        + "InventoryCount,Title "
+        + "FROM dbo.Products ";
 
-
-        public ProductRepository()
+        public ProductRepository() : base()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["shoppingappdb"].ConnectionString;
         }
-
 
         public void Add(Product product)
         {
@@ -61,7 +56,6 @@ namespace ShoppingApp.Data
             command.Parameters.Add("@Description", SqlDbType.NVarChar).Value = product.Description;
             command.Parameters.Add("@Price", SqlDbType.Decimal).Value = product.Price;
             command.Parameters.Add("@InventoryCount", SqlDbType.Int).Value = product.InventoryCount;
-
 
             product.Id = (long)command.ExecuteScalar();
 
@@ -91,7 +85,7 @@ namespace ShoppingApp.Data
             connection.Open();
             using SqlCommand command = connection.CreateCommand();
 
-            command.CommandText = "select dbo.Products.Id, dbo.Products.DateCreated, dbo.Products.DateModified, dbo.Products.CategoryId, dbo.Products.Title, dbo.Products.Description, " + 
+            command.CommandText = "select dbo.Products.Id, dbo.Products.DateCreated, dbo.Products.DateModified, dbo.Products.CategoryId, dbo.Products.Title, dbo.Products.Description, " +
                 "dbo.Products.Price, dbo.Products.InventoryCount, dbo.Category.Name FROM dbo.Products"
                 + " INNER JOIN dbo.Category ON (CategoryId = dbo.Category.Id)";
 
@@ -126,7 +120,7 @@ namespace ShoppingApp.Data
             using SqlCommand command = connection.CreateCommand();
 
             command.CommandText = "UPDATE dbo.Products " +
-                "SET DateModified = @DateModified, "  +
+                "SET DateModified = @DateModified, " +
                 "Title = @Title, " +
                 "Description = @Description, " +
                 "CategoryId = @CategoryId, " +
@@ -162,6 +156,7 @@ namespace ShoppingApp.Data
             decimal price = reader.GetDecimal(6);
             int inventoryCount = reader.GetInt32(7);
             string categoryName = reader.GetString(8);
+
             return new Product(id, dateCreated, dateModified,
                 title, description, categoryId, price, inventoryCount, categoryName);
         }

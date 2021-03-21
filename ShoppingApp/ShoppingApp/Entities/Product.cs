@@ -6,7 +6,7 @@ using Utility.Entities;
 
 namespace ShoppingApp.Entities
 {
-    public class Product: Entity, INotifyPropertyChanged
+    public class Product : Entity, INotifyPropertyChanged
     {
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
@@ -100,10 +100,15 @@ namespace ShoppingApp.Entities
 
         public Product(string title, string description, long categoryId, decimal price,
                          int inventoryCount)
-            : this(default, default, default,  title, description, categoryId, price, inventoryCount)
+            : this(default, default, default, title, description, categoryId, price, inventoryCount)
         { }
 
-        public Product(long id, DateTime dateCreated,  DateTime dateModified, string title,   string description, long categoryId, decimal price,  int inventoryCount)
+        public Product(string title,decimal price) {
+            this.Title = title;
+            this.Price = price;
+        }
+
+        public Product(long id, DateTime dateCreated, DateTime dateModified, string title, string description, long categoryId, decimal price, int inventoryCount)
             : base(id, dateCreated, dateModified)
         {
             this.CategoryId = categoryId;
@@ -118,7 +123,7 @@ namespace ShoppingApp.Entities
             : base(id, dateCreated, dateModified)
         {
             this.CategoryId = categoryId;
-            Category = new Category(categoryId,categoryName);
+            Category = new Category(categoryId, categoryName);
             this.Title = title;
             this.Description = description;
             this.Price = price;

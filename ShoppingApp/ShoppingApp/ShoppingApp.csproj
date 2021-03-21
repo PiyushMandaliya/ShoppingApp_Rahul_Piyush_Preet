@@ -15,9 +15,4 @@
     <ProjectReference Include="..\Utility\Utility.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModel\UserViewModel\" />
-    <Folder Include="View\UserView\" />
-  </ItemGroup>
-
 </Project>

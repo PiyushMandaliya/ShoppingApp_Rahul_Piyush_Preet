@@ -23,13 +23,11 @@ namespace ShoppingApp.Data
     }
 
 
-    class CategoryRepository : ICategoryRepository
+    class CategoryRepository :BaseRepository, ICategoryRepository
     {
-        private readonly string connectionString;
 
         public CategoryRepository()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["shoppingappdb"].ConnectionString;
         }
 
         public void Add(Category category)
