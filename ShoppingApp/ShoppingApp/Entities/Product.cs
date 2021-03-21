@@ -6,6 +6,7 @@ using Utility.Entities;
 
 namespace ShoppingApp.Entities
 {
+    //Author: Piyushkumar Mandaliya
     public class Product : Entity, INotifyPropertyChanged
     {
         #region INotifyPropertyChanged

@@ -14,7 +14,7 @@ namespace ShoppingApp.ViewModel.UserViewModel
     /// </summary>
     public class ProductViewModel : ViewModel
     {
-        const long userId = 1000;
+        private long userId;
 
         public event Action<string> addMessage;
 
@@ -68,8 +68,9 @@ namespace ShoppingApp.ViewModel.UserViewModel
             }
         }
 
-        public ProductViewModel(IProductService productService, ICartService cartService)
+        public ProductViewModel(IProductService productService, ICartService cartService,long userId)
         {
+            this.userId = userId;
             this._productService = productService;
             this._cartService = cartService;
 

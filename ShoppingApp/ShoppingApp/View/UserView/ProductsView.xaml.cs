@@ -19,6 +19,10 @@ namespace ShoppingApp.View.UserView
     /// </summary>
     public partial class ProductsView : Window
     {
+        public ProductsView()
+        {
+        }
+
         public ProductsView(ProductViewModel productViewModel)
         {
             InitializeComponent();

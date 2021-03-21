@@ -1,5 +1,6 @@
 ﻿using ShoppingApp.Data;
 using ShoppingApp.Services;
+using ShoppingApp.View;
 using ShoppingApp.View.AdminView;
 using ShoppingApp.View.UserView;
 using ShoppingApp.ViewModel.UserViewModel;
@@ -21,8 +22,16 @@ namespace ShoppingApp
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            Window window = new ProductsView(new ProductViewModel(new ProductService(new ProductRepository()),new CartService()));
+            Window window = new MainMenuView();
             window.Show();
+
+            //UserRepository userRepository = new UserRepository();
+            //UserService userService = new UserService(userRepository);
+            //LoginView r = new LoginView(userService);
+            //r.Show();
+
+//            Window window = new ProductsView(new ProductViewModel(new ProductService(new ProductRepository()),new CartService()));
+     //       window.Show();
         }
     }
 }

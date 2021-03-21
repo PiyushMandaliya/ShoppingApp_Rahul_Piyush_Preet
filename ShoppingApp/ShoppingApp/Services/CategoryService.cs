@@ -7,6 +7,7 @@ using Utility.Monads;
 
 namespace ShoppingApp.Services
 {
+    //Author: Piyushkumar Mandaliya
     public interface ICategoryService
     {
         Result<Category> GetCategory(long id);

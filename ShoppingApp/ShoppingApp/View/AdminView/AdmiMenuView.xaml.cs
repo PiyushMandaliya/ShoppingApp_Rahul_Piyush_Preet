@@ -33,7 +33,6 @@ namespace ShoppingApp.View.AdminView
         private AdminMenuViewModel CreateViewModel()
         {
             AdminMenuViewModel adminMenuViewModel = new AdminMenuViewModel();
-            adminMenuViewModel.orderHistoryAction += OpenOrderHistoryWindow;
             adminMenuViewModel.manageCategoryAction += OpenManageCategoryWindow;
             adminMenuViewModel.manageProductAction += OpenManageProductWindow;
             adminMenuViewModel.logoutAction += OpenLoginWindow;
@@ -51,7 +50,9 @@ namespace ShoppingApp.View.AdminView
 
         private void OpenLoginWindow()
         {
-
+            AdminLoginView adminLoginView = new AdminLoginView();
+            adminLoginView.Show();
+            this.Close();
         }
 
         private void OpenManageCategoryWindow()
@@ -68,9 +69,5 @@ namespace ShoppingApp.View.AdminView
             window.Show();
         }
 
-        private void OpenOrderHistoryWindow()
-        {
-
-        }
     }
 }

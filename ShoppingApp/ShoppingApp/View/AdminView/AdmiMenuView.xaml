@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Admin Option" Height="300" Width="500">
 
+    <!-- Author Piyushkumar Mandaliya-->
+
+
 
     <StackPanel  Orientation="Vertical" MinHeight="250" MinWidth="300" VerticalAlignment="Center" HorizontalAlignment="Center">
 
@@ -19,10 +22,6 @@
             <Button Content="Manage Product" Height="30" Width="180" Command="{Binding Path=ManageProductCommand}" FontSize="15" />
         </StackPanel>
 
-        <StackPanel Margin="10"  Orientation="Horizontal"  HorizontalAlignment="Center" >
-            <Button Content="Order History" Height="30" Width="180" Command="{Binding Path=OrderHistoryCommand}" FontSize="15" />
-        </StackPanel>
-        
         <StackPanel Margin="10"  Orientation="Horizontal"  HorizontalAlignment="Center" >
             <Button Content="Logout" Height="30" Width="180" Command="{Binding Path=LogoutCommand}" FontSize="15" />
         </StackPanel>

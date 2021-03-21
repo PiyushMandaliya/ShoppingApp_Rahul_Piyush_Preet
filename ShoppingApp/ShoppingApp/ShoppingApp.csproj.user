@@ -12,21 +12,33 @@
     <Compile Update="View\AdminView\AdmiMenuView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AdminView\AdminLoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AdminView\CategoryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\AdminView\ProductView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\MainMenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserView\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserView\ProductsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserView\RegistrationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="View\AdminView\AdmiMenuView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\AdminView\AdmiMenuView.xaml">
+    <Page Update="View\AdminView\AdminLoginView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AdminView\CategoryView.xaml">
@@ -35,7 +47,16 @@
     <Page Update="View\AdminView\ProductView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\MainMenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserView\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\UserView\ProductsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserView\RegistrationView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

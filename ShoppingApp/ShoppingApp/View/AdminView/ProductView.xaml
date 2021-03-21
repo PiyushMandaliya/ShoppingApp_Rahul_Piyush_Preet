@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="ProductView" Height="650" Width="1050">
 
+    <!-- Author Piyushkumar Mandaliya-->
+
+
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Padding" Value="10, 2" />

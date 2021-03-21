@@ -8,6 +8,7 @@ using Utility.Monads;
 namespace ShoppingApp.Services
 {
 
+    //Author: Piyushkumar Mandaliya
     public interface IProductService
     {
         Result<Product> GetProduct(long id);

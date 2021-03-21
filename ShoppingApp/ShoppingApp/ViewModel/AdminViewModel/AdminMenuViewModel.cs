@@ -6,14 +6,14 @@ using Utility;
 
 namespace ShoppingApp.ViewModel.AdminViewModel
 {
+
+    //Author: Piyushkumar Mandaliya
     public class AdminMenuViewModel
     {
-        public event Action manageCategoryAction, manageProductAction, orderHistoryAction, logoutAction;
-
+        public event Action manageCategoryAction, manageProductAction, logoutAction;
 
         public DelegateCommand ManageCategoryCommand { get; }
         public DelegateCommand ManageProductCommand { get; }
-        public DelegateCommand OrderHistoryCommand { get; }
         public DelegateCommand LogoutCommand { get; }
 
 
@@ -21,7 +21,6 @@ namespace ShoppingApp.ViewModel.AdminViewModel
         {
             ManageCategoryCommand = new DelegateCommand(ManageCategory);
             ManageProductCommand = new DelegateCommand(ManageProduct);
-            OrderHistoryCommand = new DelegateCommand(OrderHistory);
             LogoutCommand = new DelegateCommand(Logout);
         }
 
@@ -33,11 +32,6 @@ namespace ShoppingApp.ViewModel.AdminViewModel
         private void ManageProduct(object _)
         {
             manageProductAction?.Invoke();
-        }
-        
-        private void OrderHistory(object _)
-        {
-            orderHistoryAction?.Invoke();
         }
         
         private void Logout(object _)

@@ -9,6 +9,8 @@ using System.Windows;
 
 namespace ShoppingApp.ViewModel.AdminViewModel
 {
+
+    //Author: Piyushkumar Mandaliya
     public class AddProductViewModel : INotifyPropertyChanged
     {
         #region INotifyPropertyChanged
