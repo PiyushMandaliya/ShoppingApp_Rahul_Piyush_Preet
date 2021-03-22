@@ -15,7 +15,7 @@ namespace ShoppingApp.ViewModel.UserViewModel
         private IUserService userService;
         public event Action<string> LogInError;
         public event Action SignupAction;
-        public event Action<long> LoginSuccessfullAction;
+        public event Action<User> LoginSuccessfullAction;
 
         public DelegateCommand LoginCommand { get; }
         public DelegateCommand SignUpCommand { get; }
@@ -56,16 +56,12 @@ namespace ShoppingApp.ViewModel.UserViewModel
                 if (result.Successful)
                 {
                     long userId = result.Data.Id;
-                    LoginSuccessfullAction?.Invoke(userId);
-                
+                    LoginSuccessfullAction?.Invoke(result.Data);
                 }
                 else
                     LogInError?.Invoke(result.ErrorMessage);
             }
         }
-        
-
-        
 
         private void SignupPage(object _)
         {

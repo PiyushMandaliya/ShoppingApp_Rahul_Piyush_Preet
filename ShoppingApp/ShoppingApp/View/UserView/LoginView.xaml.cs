@@ -1,5 +1,7 @@
 ﻿using ShoppingApp.Data;
+using ShoppingApp.Entities;
 using ShoppingApp.Services;
+using ShoppingApp.UserViewModel;
 using ShoppingApp.ViewModel.UserViewModel;
 using System;
 using System.Collections.Generic;
@@ -19,7 +21,7 @@ namespace ShoppingApp.View.UserView
     /// Interaction logic for LoginView.xaml
     /// </summary>
     /// 
-    
+
     public partial class LoginView
     {
         private IUserService UserService;
@@ -46,12 +48,13 @@ namespace ShoppingApp.View.UserView
             this.Close();
         }
 
-        private void OpenProductWindow(long userId)
+        private void OpenProductWindow(User user)
         {
             ProductRepository productRepository = new ProductRepository();
             ProductService productService = new ProductService(productRepository);
             CartService cartService = new CartService();
-            ProductViewModel productViewModel =  new ProductViewModel(productService, cartService,userId);
+            UserContext.LoggedinUser = new UserViewModel.UserViewModel(user.Id, user.UserName, user.FirstName);
+            ProductViewModel productViewModel = new ProductViewModel(productService, cartService);
             ProductsView productsView = new ProductsView(productViewModel);
             productsView.Show();
             this.Close();

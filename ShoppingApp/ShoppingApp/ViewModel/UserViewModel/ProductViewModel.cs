@@ -14,12 +14,13 @@ namespace ShoppingApp.ViewModel.UserViewModel
     /// </summary>
     public class ProductViewModel : ViewModel
     {
-        private long userId;
-
         public event Action<string> addMessage;
+        public event Action<bool> logout;
 
         private readonly IProductService _productService;
         private readonly ICartService _cartService;
+
+        public DelegateCommand LogoutCommand { get; }
 
         #region Product
         public ObservableCollection<Product> Products
@@ -43,7 +44,13 @@ namespace ShoppingApp.ViewModel.UserViewModel
             }
         }
         #endregion
-
+        public string Username
+        {
+            get
+            {
+                return UserContext.LoggedinUser.FullName;
+            }
+        }
         #region Cart
         private CartViewModel cart;
         public CartViewModel Cart
@@ -68,14 +75,14 @@ namespace ShoppingApp.ViewModel.UserViewModel
             }
         }
 
-        public ProductViewModel(IProductService productService, ICartService cartService,long userId)
+        public ProductViewModel(IProductService productService, ICartService cartService)
         {
-            this.userId = userId;
             this._productService = productService;
             this._cartService = cartService;
 
             Cart = new CartViewModel(cartService);
             AddToCartCommand = new DelegateCommand(AddToCart);
+            LogoutCommand = new DelegateCommand(Logout);
         }
 
         private ObservableCollection<Product> getProducts()
@@ -123,6 +130,10 @@ namespace ShoppingApp.ViewModel.UserViewModel
             }
         }
 
+        private void Logout(Object _)
+        {
+            logout?.Invoke(true);
+        }
         private bool CanAddToCart()
         {
             return validateQty(Qty);

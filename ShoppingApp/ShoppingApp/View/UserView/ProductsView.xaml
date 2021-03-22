@@ -25,8 +25,13 @@
                     MaxWidth="250"
                     DockPanel.Dock="Top">
             <Label FontWeight="Bold" Content="Products" FontSize="20" HorizontalAlignment="Center"/>
+
             <Separator/>
         </StackPanel>
+        <DockPanel  DockPanel.Dock="Top" HorizontalAlignment="Right">
+            <Label Content="{Binding Path=Username}" FontSize="15"></Label>
+            <Button Command="{Binding Path=LogoutCommand}" FontWeight="Bold" Content="Logout" FontSize="12" HorizontalAlignment="Center"/>
+        </DockPanel>
         <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
             <DockPanel>
                 <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1" Margin="10">
@@ -126,7 +131,7 @@
                                         Binding="{Binding Product.Price}" />
                                         <DataGridTextColumn Header="QTY"
                                         Width="50"
-                                        Binding="{Binding ItemCount}" />                                       
+                                        Binding="{Binding ItemCount}" />
                                     </DataGrid.Columns>
                                 </DataGrid>
                                 <Separator/>

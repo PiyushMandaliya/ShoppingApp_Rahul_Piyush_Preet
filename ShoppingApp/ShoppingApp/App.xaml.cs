@@ -24,14 +24,6 @@ namespace ShoppingApp
             base.OnStartup(e);
             Window window = new MainMenuView();
             window.Show();
-
-            //UserRepository userRepository = new UserRepository();
-            //UserService userService = new UserService(userRepository);
-            //LoginView r = new LoginView(userService);
-            //r.Show();
-
-//            Window window = new ProductsView(new ProductViewModel(new ProductService(new ProductRepository()),new CartService()));
-     //       window.Show();
         }
     }
 }

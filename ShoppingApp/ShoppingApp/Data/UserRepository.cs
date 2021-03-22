@@ -191,7 +191,7 @@ namespace ShoppingApp.Data
             byte[] hash = (byte[])reader.GetValue(9);
             PasswordHash password = new PasswordHash(salt, hash);
 
-            return new User(userName, firstName, lastName, selectedSecurityQuestion, answers, password);
+            return new User(id, dateCreated, dateModified, userName, firstName, lastName, selectedSecurityQuestion, answers, password);
         }
 
     }

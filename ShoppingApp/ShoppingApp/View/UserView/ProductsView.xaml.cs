@@ -26,15 +26,25 @@ namespace ShoppingApp.View.UserView
         public ProductsView(ProductViewModel productViewModel)
         {
             InitializeComponent();
-            UserContext.LoggedinUser = new UserViewModel.UserViewModel(10000, "Rahul", "Mistry");
             productViewModel.addMessage += showMessage;
             productViewModel.Cart.addMessage += showMessage;
+            productViewModel.logout += logoutHandler;
             DataContext = productViewModel;
         }
 
         private void showMessage(string message)
         {
             MessageBox.Show(message);
+        }
+        private void logoutHandler(bool isLogout)
+        {
+            if (isLogout)
+            {
+                this.Hide();
+                UserContext.LoggedinUser = null;
+                Window window = new MainMenuView();
+                window.Show();
+            }
         }
     }
 }
