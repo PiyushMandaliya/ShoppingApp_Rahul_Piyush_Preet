@@ -1,5 +1,3 @@
-# ShoppingApp
-# Git:https://github.com/rahulmistry25425/ShoppingApp_Rahul_Piyush_Preet/tree/develop
 --------------------------------------------------
     Final Project - Shopping App
 --------------------------------------------------
