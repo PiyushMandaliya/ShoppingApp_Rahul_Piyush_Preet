@@ -6,11 +6,11 @@
 ##################################################
 
 Authors:
-	Rahul Mistry
-	Piyushkumar Govindbhai Mandaliya
-	Preet Rajesh Kansara
-	School: ISI College Montreal
-	Course: Programming and Web Technologies
+	Rahul Mistry <br/>
+	Piyushkumar Govindbhai Mandaliya<br/>
+	Preet Rajesh Kansara<br/>
+	School: ISI College Montreal<br/>
+	Course: Programming and Web Technologies<br/>
 
 ##################################################
 
@@ -22,11 +22,11 @@ Each customer has their own personal shopping cart. A customer is able to view p
 Admin can manage the category and manage product by the category.
 
 
-
 User Credentials 
 
 Username : imomis77  password: Piyush123 (P is Capital)
 Username : preet77 password: qwerty123
+
 
 
 Admin Credentials 
